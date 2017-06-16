@@ -1,0 +1,71 @@
+<script>
+	var arr=[4,6,7,9,1,2,5];
+	/*
+	for(let i=0;i<arr.length;i++){
+		console.log(arr[i]);
+	}
+	*/
+	var myfun=function(element,index,inputArray){
+		console.log(element);
+	}
+	arr.forEach(myfun);
+	
+	
+	var t=arr.filter(function(element){
+		return element%2==0;
+	});
+	
+	var m=arr.map(function(element){
+		return element*element;
+	});
+	
+	
+	var s=arr.some(function(element){
+		return element%5==0;
+	});
+	var e=arr.every(function(element){
+		return element>0;
+	});
+	
+	
+	var sum=arr.reduce(function(counter,element,index){
+		if(index>1)
+		return counter+element;
+	},10);
+	
+	var x=[1,5,5,1];
+	
+	var f=x.reduce(function(counter,ele1){
+		counter.push(x.filter(function(element){
+			return ele1!=element;
+		}));
+		return counter;
+	},[]);
+	
+	var cleanArray=x.filter(function(element,index,inputArray){
+	
+		return index==inputArray.indexOf(element);	
+	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
