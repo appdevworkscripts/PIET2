@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Table HTML</title>
+	</head>
+	<body>
+		<form>
+		<label for="username">Username</label>
+			<input id="username" name="username" placeholder="Enter Phone number" maxlength="10" minlength="10" type="text" pattern="^[789]\d{9}$"><br />
+		<label for="num">Number i</label>
+			<input id="num" type="number" name="num" min="-10" max="5" step="0.5"><br>
+			Gender : <input id="genderM" type="radio" name="gender" value="male" checked>
+			<label for="genderM">Male</label>, <input  id="genderF" type="radio"  name="gender" value="female" ><label for="genderF">Female</label><br />
+			<input type="checkbox" name="graduate" value="is graduate">Graduate
+			<br>
+			<input type="color" name="color"><br>
+			<input type="range" name="range"><br>
+			<select name="fruit" required multiple>
+				<option value="">select any fruit</option>
+				<option value="1">Mango</option>
+				<option>Apple</option>
+				<option>Banana</option>
+				<option>Papaya</option>
+			</select>
+			<br/>
+			<textarea rows="10"></textarea><br />
+			<button>Submit</button>
+		</form>
+	</body>
+</html>
