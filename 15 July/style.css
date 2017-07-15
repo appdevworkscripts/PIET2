@@ -1,0 +1,64 @@
+/* tagName#tagId.class[attributes=value] */
+		 #p1{
+			color:yellow;
+		 }
+		 p.blue-text{
+			color:blue;
+		 }
+		 
+		 p.red-text{
+			color:red;
+		 }
+		 div>p{
+			font-size:20px;
+		 }
+		 table#t1,#t1 tr,#t1 td,#t1 th{
+			border:1px solid;
+			border-collapse:collapse;
+		 }
+		 table#t1>thead{
+			color:white;
+			background:black;
+		 }
+		 #t1>tbody tr:nth-child(even){
+			background:lightblue;
+		 }
+		 #t1>tbody tr:nth-child(odd){
+			background:grey;
+		 }
+		 table#t1 td{
+			color:red;
+		 }
+		 div span{
+			font-weight:900;
+		 }
+		 ul{
+		 list-style-type:circle;
+		 }
+		 ul>li{
+			display:inline;
+		 }
+		 ul>li:hover{
+			color:red;
+			cursor:pointer;
+		 }
+		 a:hover{
+			color:blue;
+			font-size:40px;
+		 }
+		 a:visited{
+			color:blue;
+			font-size:40px;
+		 }
+		 div.responsive{
+			width:45%;
+			border:1px solid;
+			display:inline-block;
+		 }
+		 @media (max-width:500px){
+			div.responsive{
+				display:block;
+				width:100%;
+				border:1px solid;
+			}
+		 }
