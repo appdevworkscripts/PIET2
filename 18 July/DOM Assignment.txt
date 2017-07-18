@@ -1,0 +1,19 @@
+1 - Create a Todo App where in you can create and delete Todo Task.additionally you can mark completed task.you can differentiate tasks with different colors.
+
+2 - Create a calculator which is capable of performing arithmetic operations of two numbers along with error handling. Try to make calculator looks like real one. 
+
+3 - Create a small application where a user will enter vegetable name, weight and type. The application will calculate the price of that vegetable based on these parameters. You have to set price of each vegetable per kg.
+
+4 - Create a login and registration form where a user first register with some details like name, email, dob, gender, address etc.you have to save this data. And while login you have to check whether the user is registered or not. If user already exists show a welcome alert with the name. Otherwise throw a message for registration
+
+5 - Create a registration form in which you have to enter certain details about employee.and after that assign an employee id to each employee.(you don’t have to assign employee id at the time of registration) Atlast render all the employee details in a table along with their corresponding employee ids .
+
+6 -Create a Shopping cart where you can add maximum 10 items. You can add or remove items from cart. At the same time you can increase or decrease number of pieces for particular items.All items in the cart should have all details.Create a button for displaying all items present in cart and  the total amount.
+
+7 - Create a registration form and save current timestamp at the time of registration. Show all registered users in table. And add a filter which can filter data with name and dob.
+
+8 -Create a form for storing student data.add five subjects along with marks and grades.show total marks and percentage while clicking on submit button.
+
+9 -Create a form where you can add your favourite cartoon character along with description and rating (out of 10). Show them in Cards (highest rating at the top). You can also add and delete  cards.
+
+10 - Create a BMI calculator where you enter name, dob and weight. Show BMI value with result(underweight,normal,Obese,Overweight etc)
