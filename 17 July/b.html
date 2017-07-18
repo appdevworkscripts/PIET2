@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			.class-a{	
+				color:Red;
+			}
+			.class-b{
+				font-size:40px;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="x">Hello</p>
+		<p id="y">Bye</p>
+		<script>
+			const x=document.querySelector("#x");
+			const y=document.querySelector("#y");
+			
+			x.onclick=function(){
+				y.innerHTML="Hello";
+			}
+			y.onclick=function(){
+				y.innerHTML="Bye";
+			}
+		</script>
+	</body>
+</html>
