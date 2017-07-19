@@ -14,12 +14,17 @@
 					<th onclick="sorter('name')">Name</th>
 					<th onclick="sorter('roll')">Roll</th>
 					<th>Delete</th>
+					<th>Edit</th>
 				</tr>
 			</thead>
 			<tbody>
 			</tbody>
 		</table>
-		
+		<form onsubmit="return submitForm()">
+			Name <input type="text" id="studentName"> <br />
+			Roll <input type="number" id="studentRoll" ><br />
+			<button>Submit</button>			
+		</form>
 		
 		<script>
 			var studentsArray=[
@@ -31,10 +36,12 @@
 			];
 			
 			const tableBody=document.querySelector("#studentTable>tbody");
+			const studentNameInputBox=document.querySelector("#studentName");
+			const studentRollInputBox=document.querySelector("#studentRoll");
 			var render=function(data){
 				tableBody.innerHTML='';
 				data.forEach(function(student,index){
-					tableBody.innerHTML+='<tr><td>'+student.name+'</td><td>'+student.roll+'</td><td><button onclick="deleteRow('+index+')">Delete</button></td></tr>';
+					tableBody.innerHTML+='<tr><td>'+student.name+'</td><td>'+student.roll+'</td><td><button onclick="deleteRow('+index+')">Delete</button></td><td><button onclick="editStudent('+index+')">Edit</button></td></tr>';
 				});
 			}
 			var sorterIndex=1;
@@ -54,6 +61,23 @@
 				sorterIndex*=-1;
 			}
 			render(studentsArray);
+			var renderForm=function(student){
+				studentNameInputBox.value=student.name||'';
+				studentRollInputBox.value=student.roll||'';
+			}
+			function submitForm(){
+				var obj={
+					name:studentNameInputBox.value,
+					roll:studentRollInputBox.value
+				}
+				studentsArray.push(obj);				
+				render(studentsArray);
+				renderForm({});
+				return false;
+			}
+			var editStudent=function(index){
+				renderForm(studentsArray[index]);
+			}
 		</script>
 	</body>
 </html>
