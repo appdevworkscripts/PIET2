@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="myapp">
+	<head>
+	</head>
+	<body>
+		<form>
+			<input name="xyz">
+			<button>Submit</button>
+		</form>
+		{{x}}
+		<script src="js/angular.min.js"></script>
+		<script>
+			
+			const app=angular.module('myapp',[]);
+			
+			app.run(function($rootScope){
+				console.log('My app is started');
+				$rootScope.x=700;
+			});
+		</script>
+	</body>
+</html>
