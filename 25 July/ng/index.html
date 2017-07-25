@@ -1,0 +1,42 @@
+<!doctype html>
+<html ng-app="myapp">
+	<head>
+	</head>
+	<body>
+	{{x}}<input ng-model="x">
+		<div ng-controller="AController">
+		{{x}}<input ng-model="x">
+		</div>
+		<div ng-controller="BController">
+		{{x}}
+		<span ng-click="x=x+100">Click Me</span>
+		</div>
+		
+		<span ng-click="x=x+100">Click Me</span>
+		<script src="js/angular.min.js"></script>
+		<script>
+			
+			const app=angular.module('myapp',[]);
+			
+			
+			app.run(function($rootScope){
+				console.log('My app is started 2');
+				$rootScope.x=100;
+			});
+			
+			app.controller('BController',function($rootScope,$scope){
+				console.log('B controller loaded');
+				//$scope.x=200;
+			});
+			app.controller('AController',function($rootScope,$scope){
+				console.log('A controller loaded');
+				//$scope.x=300;
+			});
+			app.run(function($rootScope){
+				console.log('My app is started 1');
+				$rootScope.x=400;
+				
+			});
+		</script>
+	</body>
+</html>
