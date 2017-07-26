@@ -1,0 +1,53 @@
+<!doctype html>
+<html ng-app="myapp">
+	<head>
+		<style>	
+			#studentTable{
+				width:50%;
+			}
+			#studentTable, #studentTable tr, #studentTable td, #studentTable th{
+				border-collapse:collapse;
+				border:1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div ng-controller="MyCtrl">
+			{{students}}
+			<br /><br /><br /><br />
+			<table id="studentTable">
+				<thead>
+					<tr>
+						<th>Sr. No.</th>
+						<th ng-click="sortStudents('name')">Name</th>
+						<th>Roll</th>
+						<th>Delete</th>
+						<th>Edit</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="stu in students">
+						<td>{{$index+1}}</td>
+						<td>{{stu.name}}</td>
+						<td>{{stu.roll}}</td>
+						<td>
+							<button ng-click="deleteStudent($index)">Delete</button>
+						</td>
+						<td>
+							<button ng-click="editStudent(stu)">Edit</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<br /><br /><br /><br />
+			<form ng-submit="submitForm()">
+				Name : <input type="text" ng-model="student.name" required/><br />
+				
+				Roll : <input type="number" ng-model="student.roll" required/><br />
+				<button >Submit</button>
+			</form>
+		</div>
+		<script src="js/angular.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app="myapp">
+	<head>
+	</head>
+	<body>
+		<div ng-controller="MyCtrl">
+			<form ng-submit="submitForm()">
+				Name : <input type="text" ng-model="contact.name" required/><br />
+				Address1 : <input type="text" ng-model="contact.address.street1" /><br />
+				Address2 : <input type="text" ng-model="contact.address.street2" /><br />
+				Phone : <input type="text" ng-model="contact.phone" /><br />
+				<button >Submit</button>
+			</form>
+		</div>
+		<script src="js/angular.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
