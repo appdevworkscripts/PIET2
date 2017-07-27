@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="myapp">
+	<head>
+		
+	</head>
+	<body>
+		<div ng-controller="MyCtrl">
+			<form ng-submit="submitForm()">
+				<select ng-model="currency">
+					<option>USD</option>
+					<option>INR</option>
+					<option>EUR</option>
+				</select>
+				<input type="number" ng-model="num" required/>
+				<button>Submit</button>
+			</form>
+			<h1>{{result}}</h1>
+		</div>
+		<script src="js/angular.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
