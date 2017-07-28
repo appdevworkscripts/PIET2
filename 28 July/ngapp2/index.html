@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html ng-app="myapp">
+	<head>
+	</head>
+	<body>
+	
+	
+		<div ng-controller="ContactController">
+			<span ng-hide="contacts">
+				Loading contacts .........
+			</span>
+			<span ng-show="contacts.length==0">
+				No contacts in memory
+			</span>
+			<table ng-show="contacts.length>0">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Phone</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="contact in contacts">
+						<td>{{contact.name}}</td>
+						<td>{{contact.phno}}</td>
+						<td>
+							<button type="button" ng-click="deleteContact(contact)">Delete</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<form ng-submit="submitForm()">
+				Name <input type="text" ng-model="contact.name" minlength="3" required /><br />
+				Phone number <input type="text" ng-model="contact.phno" maxlength="10" minlength="10" pattern="^[789]\d{9}$" required/><br />
+				Email <input type="email" ng-model="contact.email" required /><br />
+				Address <input type="text" ng-model="contact.address" required /><br />
+				<button>Submit</button>
+			</form>
+		</div>
+	
+		<script src="js/angular.min.js"></script>
+		<script src="js/app.js"></script>
+		
+	</body>
+</html>

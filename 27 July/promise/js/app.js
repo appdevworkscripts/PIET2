@@ -41,17 +41,18 @@ app.controller('MyCtrl',function($scope,$q,$http){
 	}
 	$scope.submitForm=function(){
 		//$scope.result=asyncSquare($scope.num);
-		/*
+		
 		promisedSquare($scope.num).then(function(response){
 			return promisedCube(response.result);
 		},function(response){
-			return promisedCube();
+			$q.when();
 		}).then(function(response){
 			$scope.result=response.result;
 		},function(response){
 			console.log(response);
 		});
-		*/
+		
+		/*
 		$http({
 			url:'https://api.fixer.io/latest',
 			params:{
@@ -63,6 +64,7 @@ app.controller('MyCtrl',function($scope,$q,$http){
 		},function(response){
 			console.log(response);
 		});
+		*/
 	}
 	
 	//npm i -g http-server
