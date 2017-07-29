@@ -1,0 +1,61 @@
+<!doctype html>
+<html ng-app="myapp">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Title</title>
+  <link href="css/material.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Title</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="#!/a">A Page</a>
+          <a class="mdl-navigation__link" href="#!/b">B Page</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Title</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="#!/a">A Page</a>
+        <a class="mdl-navigation__link" href="#!/b">B Page</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <div class="page-content" ng-view>
+        <!-- Your content goes here -->
+      </div>
+    </main>
+  </div>
+  <dialog class="mdl-dialog" id="myDialog">
+    <h4 class="mdl-dialog__title">Allow data collection?</h4>
+    <div class="mdl-dialog__content">
+      <p>
+        Allowing us to collect data will let us get you the information you want faster.
+      </p>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button">Agree</button>
+      <button type="button" class="mdl-button close">Disagree</button>
+    </div>
+  </dialog>
+  <script src="js/material.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

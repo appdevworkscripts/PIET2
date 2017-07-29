@@ -1,0 +1,39 @@
+<!doctype html>
+<html ng-app="myapp">
+	<head>
+	
+	</head>
+	<body>
+		<div ng-controller="Actrl">
+			{{x | number:2}} - {{x}} <br />
+			{{amount | currency:'&#x20b9; '}} <br />
+			{{str | uppercase}} - {{str | lowercase}} <br />
+			{{mydate | date:'dd/MM/yyyy'}}
+			<input ng-model="myfilter">
+			<select ng-model="sortBy">
+				<option>name</option>
+				<option>roll</option>
+			</select>
+			<table id="studentTable">	
+				<thead>
+					<tr>
+						<th >Name</th>
+						<th >Roll</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+					<tr ng-repeat="student in studentsArray | filter :myfilter | orderBy:sortBy ">
+						<td >{{student.name | rev}}</td>
+						<td >{{student.roll}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<pre>
+			{{obj | json}}
+			</pre>
+		</div>
+		<script src="js/angular.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>

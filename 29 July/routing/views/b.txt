@@ -1,0 +1,21 @@
+<div ng-controller="BCtrl">
+
+    <h2>B Page {{x}}</h2>
+
+    {{4+5}}
+
+    <ul class="demo-list-two mdl-list">
+        <li ng-click="showContact(contact)" class="mdl-list__item mdl-list__item--two-line" ng-repeat="contact in contacts">
+            <span class="mdl-list__item-primary-content">
+      <i class="material-icons mdl-list__item-avatar">person</i>
+      <span>{{contact.name | uppercase}}</span>
+            <span class="mdl-list__item-sub-title">{{contact.phno}}</span>
+            </span>
+            <span class="mdl-list__item-secondary-content">
+      <span class="mdl-list__item-secondary-info">Actor</span>
+            <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+            </span>
+        </li>
+       
+    </ul>
+</div>
