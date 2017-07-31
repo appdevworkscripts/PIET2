@@ -1,0 +1,38 @@
+[ABC][XYZ][ABC]
+
+
+[A-Z][A-Z][a-z]
+
+[A-Za-z]
+
+
+{}
+
+[ABCD]{4}
+
+
+[789]\d{9}
+
+
+.[ABC]
+
+$A
+7A
+xB
+
+^ -> start of line
+$ -> end of line
+
+AAAPA0000A
+
+? one or none
+
+* none or many
+
++ one or many
+
+ajdcj._4646@fhhgjh_45.jgcjdsgjc._46
+
+
+^[a-zA-Z._0-9]+[@][a-zA-Z_0-9]+[.][a-zA-Z._0-9]+$
+
